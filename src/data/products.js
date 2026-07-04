@@ -1,8 +1,7 @@
 import { skinGroupCards, skinCategoryGroups } from "./skinCategories";
-import { products } from "./generateProducts";
 
 export { skinGroupCards as categoryCards };
-export { products };
+export const products = [];
 
 export const productFilters = [
   "All",

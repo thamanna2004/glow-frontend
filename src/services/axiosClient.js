@@ -1,13 +1,22 @@
 import axios from "axios";
 import useAuthStore from "../features/auth/store/authStore";
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+const configuredBaseURL = import.meta.env.VITE_API_BASE_URL || "https://glow-backend-8qmf.onrender.com";
+const baseURL = configuredBaseURL.replace(/\/+$/, "");
 
 const axiosClient = axios.create({
   baseURL,
   timeout: 30000,
   withCredentials: true,
 });
+
+function normalizeRequestUrl(url = "") {
+  if (!url || /^https?:\/\//i.test(url)) {
+    return url;
+  }
+
+  return url.replace(/^\/+/, "").replace(/^api\//, "");
+}
 
 function getStoredToken() {
   const token = localStorage.getItem("token") || localStorage.getItem("accessToken");
@@ -21,6 +30,10 @@ axiosClient.interceptors.request.use((config) => {
   const token = getStoredToken();
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
+  }
+
+  if (config.url) {
+    config.url = normalizeRequestUrl(config.url);
   }
 
   // Let the browser set multipart boundary automatically
