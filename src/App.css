@@ -161,6 +161,169 @@
   }
 }
 
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(243, 241, 235, 0.9));
+}
+
+.auth-form-card {
+  width: min(520px, 100%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(149, 145, 150, 0.2);
+  border-radius: 30px;
+  padding: 38px 34px;
+  box-shadow: 0 24px 60px rgba(23, 18, 41, 0.12);
+  text-align: left;
+}
+
+.auth-form-card h2 {
+  margin-bottom: 8px;
+}
+
+.auth-form-card p {
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.auth-form-card form {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-form-card label {
+  display: grid;
+  gap: 10px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.auth-form-card input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(149, 145, 150, 0.16);
+  background: #fbfaf8;
+  color: var(--text-h);
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form-card input:focus {
+  outline: 2px solid rgba(170, 59, 255, 0.24);
+  border-color: rgba(170, 59, 255, 0.3);
+}
+
+.input-valid {
+  border-color: #16a34a;
+}
+
+.input-error {
+  border-color: #dc2626;
+}
+
+.auth-form-card button {
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-form-card button[type="submit"] {
+  background: #1a2d24;
+  color: #f5f2e8;
+}
+
+.auth-form-card button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.link-button {
+  background: transparent;
+  color: #3d4a4a;
+  text-decoration: underline;
+  font-size: 14px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.toggle-row button {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(149, 145, 150, 0.16);
+  background: #faf7f3;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.toggle-row button.active {
+  background: #1a2d24;
+  color: #f5f2e8;
+  border-color: rgba(26, 45, 36, 0.4);
+}
+
+.success-message {
+  color: #166534;
+  margin-top: 12px;
+}
+
+.error-message {
+  color: #991b1b;
+  margin-top: 12px;
+}
+
+.resend-row {
+  margin-top: 12px;
+}
+
+.resend-row .link-button {
+  display: inline-block;
+}
+
+.password-strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4b5563;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+.password-strength strong {
+  color: #0f766e;
+}
+
+.otp-expiry {
+  margin-top: 14px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.otp-expiry .error-message {
+  margin-top: 0;
+}
+
+.browse-card button {
+  width: 100%;
+  margin-top: 24px;
+  background: #1a2d24;
+  color: #f5f2e8;
+}
+
 .ticks {
   position: relative;
   width: 100%;
