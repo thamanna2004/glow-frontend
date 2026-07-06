@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,27 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Vite / build
+dist/
+build/
+
+# Caches & coverage
+.cache/
+coverage/
+
+# Logs
+*.log
+
+# OS & IDE
+.DS_Store
+.vscode/
+>>>>>>> b31e3968d3bdf0b3f07ca7f78c4aa3dcc0dd2e8d

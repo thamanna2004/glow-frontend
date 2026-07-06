@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
@@ -80,3 +81,28 @@ const Login = () => {
 };
 
 export default Login;
+=======
+import LoginForm from "../components/LoginForm";
+
+
+function Login(){
+
+return(
+
+<div>
+
+<h1>
+Login
+</h1>
+
+<LoginForm/>
+
+</div>
+
+)
+
+}
+
+
+export default Login;
+>>>>>>> b31e3968d3bdf0b3f07ca7f78c4aa3dcc0dd2e8d
